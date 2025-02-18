@@ -8,7 +8,7 @@
 #include <iostream>
 #include "player.h"
 #include "enemy.h"
- 
+#include "background.h"
 
 class Level : BaseLevel {
 public:
@@ -21,6 +21,7 @@ public:
 
 	player p;
 	enemy e;
+	background bg;
 
 private:
 	// Level objects

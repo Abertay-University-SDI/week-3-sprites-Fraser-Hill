@@ -13,7 +13,10 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	testSprite.setPosition(100, 100);
 
 	p.setInput(in);
+	bg.setInput(in);
 	e.setWindow(hwnd);
+	bg.setWindow(hwnd);
+
 }
 
 Level::~Level()
@@ -31,6 +34,7 @@ void Level::handleInput(float dt)
 	}
 
 	p.handleInput(dt);
+	bg.handleInput(dt);
 	
 
 }
@@ -40,6 +44,7 @@ void Level::update(float dt)
 {
 	p.update(dt);
 	e.update(dt);
+
 }
 
 // Render level
@@ -47,8 +52,10 @@ void Level::render()
 {
 	beginDraw();
 
+	window->draw(bg);
 	window->draw(p);
 	window->draw(e);
+
 
 	endDraw();
 }
