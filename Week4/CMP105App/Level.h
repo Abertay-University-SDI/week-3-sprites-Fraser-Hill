@@ -9,6 +9,7 @@
 #include "player.h"
 #include "enemy.h"
 #include "background.h"
+#include "cursor.h"
 
 class Level : BaseLevel {
 public:
@@ -22,6 +23,7 @@ public:
 	player p;
 	enemy e;
 	background bg;
+	cursor c;
 
 private:
 	// Level objects
