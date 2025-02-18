@@ -7,6 +7,7 @@
 #include <string.h>
 #include <iostream>
 #include "player.h"
+#include "enemy.h"
  
 
 class Level : BaseLevel {
@@ -19,6 +20,7 @@ public:
 	void render() override;
 
 	player p;
+	enemy e;
 
 private:
 	// Level objects
